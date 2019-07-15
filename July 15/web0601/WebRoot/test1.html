@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8" />
+    <title>query.html</title>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+	<style>
+		.main{
+			width: 800px;
+			margin: 40px auto;
+		}
+		.form{}
+		.form .commit{
+			min-width: 80px;
+			padding: 6px;
+		}
+		table{
+			border-collapse:collapse;
+		}
+		talbe,td,th{
+				border:2px solid #ccc;
+				padding: 5px;
+		}
+		.close{
+			display:none;
+		}
+	</style>
+  </head>
+  
+  <body>
+  	<div class="main">
+  		<div class="form">
+  			<button class="commit" onclick="query()">查询</button>
+  		</div>
+  		<table class="close">
+			<tr>
+				<th>学号</th>
+				<th>姓名</th>
+				<th>性别</th>
+				<th>手机号</th>
+			</tr>
+		</table>
+  	</div>
+  </body>
+  
+  <script>
+  //$.ajax()写出jQuery.ajax()是一样的
+  	function query(){
+  		$.ajax({
+  			type: "GET",		/* 请求类型 GET / POST */ 
+  			url:"QueryAll",		/* 服务URI, 用相对地址 */
+  			dataType:'json',	/* 期望服务器返回的数据类型 */
+  			success:function(resp){	/* 已经将服务器返回的数据转成 JS对象 */
+  				console.log(resp);
+  			}
+  		});
+  	}
+  </script>
+</html>
