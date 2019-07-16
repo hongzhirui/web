@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	    <link rel="stylesheet" href="css/common.css" />
+		<script type="text/javascript" src="js/jquery.min.js" ></script>
+		
+		<style>
+			.main
+	    	{
+	    		width: 360px;
+	    		margin: 10px auto;    		
+	    	}
+	    	.main input,select{
+	    		width: 250px;
+	    		padding: 4px;
+	    		margin: 2px;
+	    	}
+		</style>
+	</head>
+	<body>
+		<div class="main">
+			<!--  method: GET/POST，通常为POST  action: 即后台接口相对路径 -->
+	  	  <form method='POST' action='AddStudent' >
+	    	学号: <input type='text' name='id' />  <br>  <!-- name: 即参数名 -->
+	    	姓名: <input type='text' name='name' /> <br>
+	    	手机: <input type='text' name='phone' /> <br>
+	    	性别: <select name='sex' style="width: 50px;">
+	    		<option value='male'> 男 </option>
+	    		<option value='female'> 女 </option>
+	    	</select> <br>
+	    	<input type='submit' value='提交' />  <!-- type=submit表示自动执行提交功能 -->
+	    </form>
+		</div>
+	</body>
+</html>
